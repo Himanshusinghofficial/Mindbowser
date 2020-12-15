@@ -46,7 +46,7 @@ const AddLogModal = ({ addLog }) => {
   };
 
   return (
-    <div id='add-log-modal' className='modal' style={modalStyle}>
+    <div id='addlogmodal' className='modal' style={modalStyle}>
       <div className='modal-content'>
         <h4>Add Employee</h4>
         <div className='row'>

@@ -32,7 +32,7 @@ const SearchBar = ({ searchLogs,clearFilter,filtered }) => {
           <div className='input-field' style={{color:'black'}}>
             <input
               type='search'
-              placeholder='Search Employee..'
+              placeholder='Search Employee(By Using FirstName,LastName or City)...'
               ref={text}
               onChange={onChange}
             />

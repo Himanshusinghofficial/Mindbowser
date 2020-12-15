@@ -14,7 +14,7 @@ const Login = ({error,isAuthenticated,token,login, clearErrors }) => {
       history.push("/");
     }
     setAuthToken(token)
-    console.log(isAuthenticated);
+    // console.log(isAuthenticated);
     if (error === 'Invalid Credentials') {
       M.toast({ html: `Invalid Credentials` });
       clearErrors();

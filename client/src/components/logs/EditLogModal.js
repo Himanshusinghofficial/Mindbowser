@@ -56,7 +56,7 @@ const EditLogModal = ({ current, updateLog }) => {
   };
 
   return (
-    <div id='edit-log-modal' className='modal' style={modalStyle}>
+    <div id='editlogmodal' className='modal' style={modalStyle}>
       <div className='modal-content'>
         <h4>Update Employee Details</h4>
         <div className='row'>

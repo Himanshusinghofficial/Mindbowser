@@ -17,7 +17,8 @@ const Register = ({register,token, error, clearErrors, isAuthenticated }) => {
     }
      setAuthToken(token)
     if (error === 'User already exists') {
-      M.toast({ html: `User already exists` });
+      M.toast({ html: `User already exists Please Login` });
+      history.push("/login");
       clearErrors();
     }
     // eslint-disable-next-line

@@ -1,12 +1,20 @@
-import React, { Fragment } from 'react';
+import React, { Fragment,useEffect } from 'react';
 import SearchBar from '../layout/SearchBar';
 import Logs from '../logs/Logs';
 import AddBtn from '../layout/AddBtn';
 import AddLogModal from '../logs/AddLogModal';
 import EditLogModal from '../logs/EditLogModal';
+import {loadUser} from '../../actions/authActions';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 //Home Page
-const Home = () => {
+const Home = ({loadUser}) => {
+  useEffect(() => {
+    loadUser();
+    // eslint-disable-next-line
+  }, []);
+   
   return (
     <Fragment>
     <SearchBar />
@@ -26,4 +34,12 @@ const Home = () => {
   );
 };
 
-export default Home;
+// export default Home;
+Home.propTypes = {
+  loadUser: PropTypes.func.isRequired
+};
+
+export default connect(
+  null,
+  { loadUser }
+)(Home);
